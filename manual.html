@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link type="text/css" rel="stylesheet" media="screen" href="estilo.css" />
+    <title>Manual do Weka</title>
+</head>
+<body>
+    <div id = "tela">
+        <div id = "cabeca">
+            <h1>Manual Weka</h1>
+            <br>
+            <h2>Presented by Edgar D. Santos</h2>
+        </div>
+        <div id = "instalar">
+            <h1>Como Instalar:</h1>
+            <p>Vamos iniciar o manual de Weka com a parte da instalação do Software.
+                <br>
+                 Primeiro devemos entrar no site para baixar o executável do Weka,
+                 <br>
+                 nesse link: https://sourceforge.net/projects/weka/
+                 <br>
+                 Depois, como mostra a imagem abaixo(passe o mouse para abrir melhor), iremos clicar no
+                 <br>
+                 botão grande e verde escrito "Download".
+                 <br>
+                 <img src="01.png" id="teste" alt="ERRO AO CARREGAR A IMAGEM!!" width=400 height=200>
+                 <br>
+                 O arquivo com nome de "weka-3-8-4-azul-zulu-windows.exe" irá começar um download,
+                 <br>
+                 depois que o download estiver finalizado, clique por fim no executável.
+                 <br>
+                 O programa irá abrir uma tela, apenas clique em "NEXT" e na próxima tela em "I AGREE".
+                 <br>
+                 Na próxima tela mostrada abaixo, ele irá pedir para escolher o tipo de instalação,
+                 <br>
+                 escolha a opção "FULL" para ele instalar o Weka completo e deixe a opção "Associate files" ativada,
+                 <br>
+                 então clique em "NEXT". 
+                 <br>
+                 <img src="02.png" id="teste" alt="ERRO AO CARREGAR A IMAGEM!!" width=400 height=200>
+                 <br>
+                 Na próxima tela, apenas escolha aonde o programa irá instalar seus arquivos e clique em "NEXT". 
+                 <br>
+                 Na tela seguinte pode ignorar as informações e clicar em "INSTALL".
+                 <br>
+                 Como mostra na imagem abaixo, quando sua instalação estiver completa, ele vai mostrar um "COMPLETED",
+                 <br>
+                 e depois basta clicar em "NEXT" e na ultima tela clicar em "FINISH".
+                 <br>
+                 <img src="03.png" id="teste" alt="ERRO AO CARREGAR A IMAGEM!!" width=400 height=200>
+                 <br>
+                 <h2>Pronto! Seu Weka está devidamente instalado!</h2>
+                </p>
+
+        </div>
+        <div id = "arquivo">
+            <h1>Criando arquivo de extensão ".arff": </h1>
+            <p>
+                O WEKA utiliza como arquivo padrão para as tarefas de mineração o formato ARFF,
+                <br> 
+                porém o minerador pode aceitar também arquivos CSV para realização das tarefas;
+                <br> 
+                porém, é preciso inserir os atributos de cada instância.
+                <br>
+                O ARFF aceita basicamente dois tipos de datatypes que são String (Nominal) e Numeric.
+                <br> 
+                Geralmente o minerador trabalha com Nominal Values em tarefas de associação e classificação;
+                <br> 
+                e com atributos numéricos em tarefas de agrupamento; contudo isso não é obrigatório.
+                <br>
+                Para iniciarmos a criação do arquivo em "arff", primeiramente abra um bloco de notas em sua maquina.
+                <br>
+                adicionar o nome do conjunto de dados usando os descritores do arquivo e dos atributos conforme a regra:
+                <br>
+                @relation nome_do_conjuto_de_dados;
+                <br>
+                @attribute nome do atributo seguido do seu tipo;
+                <br>
+                @data e logo em seguida os dados em si.
+                <br>
+                Em seguida deve-se salvar o arquivo como texto puro com extensão ARFF.
+                <br>
+                Veja a imagem abaixo para ter um pequeno exemplo.
+                <br>
+                <img src="04.png" id="teste" alt="ERRO AO CARREGAR A IMAGEM!!" width=400 height=200>
+                <br>
+                Salve com o nome desejado e coloque o ".arff" logo depois.
+                <br>
+                <img src="05.png" id="teste" alt="ERRO AO CARREGAR A IMAGEM!!" width=400 height=200>
+                <br>
+                O arquivo com a extensão ".arff" irá receber o icone do Weka, como pode ver no exemplo abaixo.
+                <br>
+                <img src="06.png" id="teste" alt="ERRO AO CARREGAR A IMAGEM!!" width=400 height=200>
+
+
+
+            </p>
+
+        </div>
+        <div id = "uti">
+            <h1>Como utilizar o Weka:</h1>
+            <p>
+                <h2>Um pouco sobre o Weka:</h2>
+                Weka é um software livre para mineração de dados, do tipo open source,
+                <br> 
+                desenvolvido em Java dentro das especificações da GPL (General Public License) 
+                <br>
+                que se consolidou como a ferramenta de mineração de dados mais utilizada por estudantes 
+                <br>
+                e professores de universidades. A ferramenta também é muito utilizada por profissionais 
+                <br>
+                que desejam aprender os conceitos básicos sobre mineração de dados. 
+                <br>
+                Através de sua interface gráfica (conhecida como Weka Explorer) 
+                <br>
+                 possível conduzir processos de mineração de dados de forma simples, 
+                 <br>
+                 realizando a avaliação dos resultados obtidos e a comparação de algoritmos. 
+                 <br>
+                 Além disso, a ferramenta oferece recursos para a execução de tarefas relacionadas 
+                 <br>
+                 ao pré-processamento de dados como, por exemplo, a seleção e a transformação de atributos.
+                 <br>
+                 <h2>Abrindo um arquivo no Weka:</h2>
+                 Acompanhando a imagem abaixo, abra seu Weka e procure em sua maquina onde está salvo
+                 <br>
+                 seu arquivo já configurado no formato ".arff" ou ".csv". Em seguida, já no Weka
+                 <br>
+                 aperte no botão "Explorer". O programa irá guiar você para uma nova tela.
+                 <br>
+                 <img src="07.png" id="teste" alt="ERRO AO CARREGAR A IMAGEM!!" width=400 height=200>
+                 <br>
+                 Seguindo para a próxima tela, clique no botão "Open File". Em seguida
+                 <br>
+                 ele irá pedir para você buscar seu arquivo, como mostra na imagem, você poderá
+                 <br>
+                 alterar o tipo de arquivo que quer buscar ali embaixo, depois de escolher o tipo
+                 <br>
+                 e encontrar seu arquivo, basta clicar em "Abrir".
+                 <br>
+                 <img src="08.png" id="teste" alt="ERRO AO CARREGAR A IMAGEM!!" width=400 height=200>
+                 <br>
+                 <img src="09.png" id="teste" alt="ERRO AO CARREGAR A IMAGEM!!" width=400 height=200>
+                 <br>
+                 Depois de aberto, o arquivo no formato ".csv" irá mostrar essa tela
+                 <br>
+                 onde os dados podem ser analisados pelo usuário.
+                 <br>
+                 <img src="10.png" id="teste" alt="ERRO AO CARREGAR A IMAGEM!!" width=400 height=200>
+                 <br>
+                 <h2>Árvores de Decisão e J48: </h2>
+                 Árvores de decisão são modelos estatísticos que utilizam um treinamento supervisionado
+                 <br> 
+                 para a classificação e previsão de dados. Em outras palavras, em sua construção 
+                 <br>
+                 é utilizado um conjunto de treinamento formado por entradas e saídas. 
+                 <br>
+                 Estas últimas são as classes. Veja um exemplo de Árvore de Decisão abaixo:
+                 <br>
+                 <img src="11.png" id="teste" alt="ERRO AO CARREGAR A IMAGEM!!" width=400 height=200>
+                 <br>
+                 A árvore de decisão é um fluxograma que representa o processo ao se tomar uma ou várias decisões. 
+                 <br>
+                 Trata-se de uma ferramenta de apoio que faz uso de um gráfico ou modelo em forma de 
+                 <br>
+                 árvore a fim de representar escolhas e suas possíveis consequências. 
+                 <br>
+                 Muitas empresas fazem uso dela para definir a política corporativa ou como ferramenta 
+                 <br>
+                 para os funcionários. Todos também podem usá-la de modo individual ao tomar decisões 
+                 <br>
+                 difíceis e dividi-las em uma série de escolhas mais simples ou com menor peso emocional. 
+                 <br>
+                 Você pode aprender a fazer uma árvore de decisão direcionada às suas necessidades 
+                 <br>
+                 identificando o problema e criando uma árvore básica ou uma árvore de preocupações.
+                 <br>
+                 Listando os dados em variáveis e montando as situações de acordo com o tipo de problema
+                 <br>
+                 que você precisa analisar.
+                 <br>
+                 Ao calcular a utilidade esperada ou o valor de cada escolha na árvore, 
+                 <br>
+                 você pode minimizar o risco e maximizar a probabilidade de alcançar um resultado desejável.
+                 <br> 
+                 Para calcular a utilidade esperada de uma escolha, basta subtrair o custo dessa decisão dos 
+                 <br>
+                 benefícios esperados.
+                 <br>
+                 Uma Árvore de Decisão permite que um indivíduo ou organização compare possíveis ações com base 
+                 <br>
+                 em seus custos, 
+                 probabilidades e benefícios. Podem ser usadas tanto para conduzir diálogos informais 
+                 <br>
+                 quanto para mapear um algoritmo que prevê a melhor escolha, matematicamente.
+                 <br>
+                 <h2>Utilizando o J48:</h2>
+                 C0.25 (J48) é um algoritmo usado para gerar uma árvore de decisão desenvolvida por Ross Quinlan.
+                 <br> 
+                 C0.25 é uma extensão do algoritmo ID3 anterior de Quinlan. 
+                 <br>
+                 As árvores de decisão geradas pelo C0.25 podem ser usadas para classificação e, 
+                 <br>
+                 por esse motivo, o C0.25 é frequentemente chamado de classificador estatístico. 
+                 <br>
+                 Tornou-se bastante popular após a classificação nº 1 nos 10 principais artigos de 
+                 <br>
+                 destaque em Mineração de Dados publicados pela Springer LNCS em 2008.
+                 <br>
+                 Vamos aprender a utilizar essa ferramenta no Weka, primeiramente abra seu Weka na tela inicial.
+                 <br>
+                 Depois, faça o procedimento ensinado anteriormente sobre abrir um arquivo ".arff". 
+                 <br>
+                 Quando chegar na tela principal referente ao arquivo, clique em "Classify" como
+                 <br>
+                 mostra na imagem abaixo:
+                 <br>
+                 <img src="12.png" id="teste" alt="ERRO AO CARREGAR A IMAGEM!!" width=400 height=200>
+                 <br>
+                 Logo sem seguida, clique no botão "Choose", o programa irá abrir uma tela com várias
+                 <br>
+                 opções, procure pela pasta chamada "Trees", abra essa pasta e clique em "J48"
+                 <br>
+                 como mostra na imagem abaixo:
+                 <br>
+                 <img src="13.png" id="teste" alt="ERRO AO CARREGAR A IMAGEM!!" width=400 height=200>
+                 <br>
+                 Agora para a parte final, marque a opção "Use training set" no canto superior da tela
+                 <br>
+                 e logo em seguida clique no botão "Start" no canto inferior.
+                 <br>
+                 Como mostra na imagem abaixo, a tela em branco irá mostrar os dados de seu arquivo ".arff"
+                 <br>
+                 e você já poderá visualizar seus dados. Para finalizar, iremos transformar os dados em 
+                 <br>
+                 uma Árvore de Decisão.
+                 <br>
+                 <img src="14.png" id="teste" alt="ERRO AO CARREGAR A IMAGEM!!" width=400 height=200>
+                 <br>
+                 Seguindo a referencia da imagem abaixo, clique com botão direito sob o nome mostrado
+                 <br>
+                 na parte inferior e clique por fim na opção "Visualize tree", note que depois 
+                 <br>
+                 de escolher essa opção, o Weka irá criar uma Árvore de Decisão utilizando os dados que 
+                 <br>
+                 você forneceu previamente no arquivo ".arff". 
+                 <br>
+                 <img src="15.png" id="teste" alt="ERRO AO CARREGAR A IMAGEM!!" width=400 height=200>
+                 <br>
+                 <img src="16.png" id="teste" alt="ERRO AO CARREGAR A IMAGEM!!" width=400 height=200>
+                 <br>
+                 <h1>Suporte e Confiança:</h1>
+                 Para finalizar nosso manual sobre Weka, vamos falar um pouco sobre o processo 
+                 <br>
+                 dos calculos que levam o programa a ser uma ótima escolha para a analise
+                 <br>
+                 de dados quando nos referimos a Machine Learning.
+                 <br>
+                 <h2>Sobre Mineração de Dados</h2>
+                 A Mineração de Dados (Data Mining) é uma linha de pesquisa pertencente ao campo da 
+                 <br>
+                 Ciência da Computação que tem por objetivo oferecer estratégias automatizadas para a análise de 
+                 <br>
+                 grandes bases de dados de empresas, procurando extrair das mesmas informações que 
+                 <br>
+                 estejam implícitas, que sejam previamente desconhecidas e potencialmente úteis. 
+                 <br>
+                 A Mineração de Dados surgiu no início dos anos 90, a partir da reunião de ideias 
+                 <br>
+                 provenientes de diferentes áreas como Inteligência Artificial, Banco de Dados, Estatística, e 
+                 <br>
+                 Visualização de Dados. A principal motivação para o surgimento da Mineração de Dados encontra-se 
+                 <br>
+                 no fato de as organizações estarem armazenando de forma contínua uma enorme quantidade de dados 
+                 <br>
+                 a respeito de seus negócios nas últimas décadas. O conhecimento obtido pelas técnicas de 
+                 <br>
+                 Mineração de Dados é geralmente expresso na forma de regras e padrões.
+                 <br>
+                 Dada uma regra A Þ B, a sua medida de suporte (Sup) representa a porcentagem de transações da
+                 <br> 
+                 base de dados que contêm os itens de A e B, indicando a relevância da mesma. 
+                 <br>
+                 Já a sua medida de confiança (Conf) representa, dentre as transações que possuem 
+                 <br>
+                 os itens de A, a porcentagem de transações que possuem também os itens de B, 
+                 <br>
+                 indicando a validade da regra.
+                 <br>
+                 <img src="17.png" id="teste" alt="ERRO AO CARREGAR A IMAGEM!!" width=400 height=200>
+                 <br>
+                 Observe que cada registro da base de dados armazena a relação de produtos adquiridos 
+                 <br>
+                 por um cliente específico. Um exemplo de regra de associação que poderia ser 
+                 <br>
+                 minerada nesta base de dados, através da utilização de uma ferramenta de data mining, 
+                 <br>
+                 é dado por: {cerveja} Þ {salaminho}. Note que duas das seis transações que compõem 
+                 <br>
+                 a base contêm os produtos {cerveja} e {salaminho}. Desta maneira, 
+                 <br>
+                 o suporte da regra {cerveja} Þ {salaminho} pode ser calculado da 
+                 <br>
+                 seguinte forma: 2 ¸ 6 = 33,33%. Observe agora que na base de dados, 
+                 <br>
+                 existem duas transações que contêm os produtos {cerveja} e {salaminho} juntos e 
+                 <br>
+                 três transações que contêm o produto {cerveja}. A confiança da regra 
+                 <br>
+                 {cerveja} Þ {salaminho} pode então ser calculada da seguinte 
+                 <br>
+                 maneira: 2 ¸ 3 = 66,67%. Este valor indica que 66,67% dos consumidores 
+                 <br>
+                 que compraram {cerveja} também compraram {salaminho}.
+                 <br>
+                 
+
+             
+                </p>
+
+        </div>
+        
+
+    </div>
+    
+</body>
+</html>
